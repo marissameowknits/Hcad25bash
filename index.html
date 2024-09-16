@@ -59,3 +59,15 @@
 
 </body>
 </html>
+
+<script>
+  // Select all accordion headers
+const headers = document.querySelectorAll('.accordion-header');
+
+// Add click event to toggle each accordion section
+headers.forEach(header => {
+  header.addEventListener('click', function() {
+    const item = this.parentElement;
+    item.classList.toggle('active');
+  });
+});</script>
