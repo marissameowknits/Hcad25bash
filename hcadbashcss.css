@@ -4,20 +4,18 @@ body {
 
 /* Accordion Header Styling */
 .accordion-header {
+  display: inline-block;
+  width: 100px; /* Width of the accordion tab */
+  vertical-align: top;
+  padding: 15px;
   background-color: #f39c12;
-  color: white;
-  padding: 20px;
-  font-size: 20px;
-  border-radius: 5px; /* Rounded corners */
-  border: 1px solid #e67e22;
-  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
 }
+
 
 .accordion-header:hover {
   background-color: #e67e22;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
-
 /* Active Accordion */
 .accordion-item.active .accordion-header {
   background-color: #d35400;
@@ -25,17 +23,14 @@ body {
 
 /* Accordion Content */
 .accordion-content {
-  padding: 15px;
-  border: 1px solid #d35400;
-  background-color: #f8f9fa;
-  border-radius: 5px; /* For rounded corners */
-  max-height: 0;
+  max-width: 0;
   overflow: hidden;
-  transition: max-height 0.5s ease;
+  white-space: nowrap;
+  transition: max-width 0.5s ease;
+  padding: 0 15px;
 }
-
 .accordion-item.active .accordion-content {
-  max-height: 500px; /* Adjust for content height */
+  max-width: 400px; /* Adjust based on content width */
 }
 
 /* Improved sticky sidebar */
