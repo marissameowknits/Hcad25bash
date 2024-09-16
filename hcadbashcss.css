@@ -12,11 +12,19 @@ overflow:hidden;
 article.accordion section
 {
 position:sticky;
-float: none;
+float:left;
 width: 2em;
 height: 15em;
 overflow:hidden;
 }
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+
 article.accordion section h2
 {
 position: absolute;
