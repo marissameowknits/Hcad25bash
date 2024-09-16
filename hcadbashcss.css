@@ -12,7 +12,7 @@ overflow:hidden;
 article.accordion section
 {
 position:sticky;
-float: left;
+float: none;
 width: 2em;
 height: 15em;
 overflow:hidden;
