@@ -1,44 +1,67 @@
+/* General Styles */
 body {
-  background-color: #dcdcdc; /* Lighter background for readability */
+  background-color: #dcdcdc;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-/* Accordion Header Styling */
-article.accordion-header {
-  display: inline-block;
-  width: 100px; /* Width of the accordion tab */
-  vertical-align: top;
-  padding: 15px;
-  background-color: #f39c12;
-  cursor: pointer;
-}
-
-
-article.accordion-header:hover {
-  background-color: #e67e22;
-}
-/* Active Accordion */
-.accordion-item.active .accordion-header {
-  background-color: #d35400;
-}
-
-/* Accordion Content */
-article.accordion-content {
-  max-width: 0;
-  overflow: hidden;
-  white-space: nowrap;
-  transition: max-width 0.5s ease;
-  padding: 0 15px;
-}
-article.accordion-item.active .accordion-content {
-  max-width: 400px; /* Adjust based on content width */
-}
-
-/* Improved sticky sidebar */
-article.accordion section {
-  width: 3em;
-  height: auto;
-}
-
-article.accordion section h2 {
+h2 {
   font-size: 1.5em;
+  color: #333;
+  text-align: left;
+  margin: 20px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #d35400;
+}
+
+a:hover {
+  color: #e67e22;
+}
+
+/* Accordion Styles */
+article.accordion {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+}
+
+section {
+  background-color: white;
+  margin: 10px 0;
+  padding: 15px;
+  border: 1px solid #ddd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+section img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+}
+
+iframe {
+  width: 100%;
+  height: auto;
+  border: none;
+}
+
+/* Media Queries for Responsive Design */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 1.2em;
+  }
+
+  img, iframe {
+    width: 100%;
+    height: auto;
+  }
 }
