@@ -3,7 +3,7 @@ body {
 }
 
 /* Accordion Header Styling */
-.accordion-header {
+article.accordion-header {
   display: inline-block;
   width: 100px; /* Width of the accordion tab */
   vertical-align: top;
@@ -13,7 +13,7 @@ body {
 }
 
 
-.accordion-header:hover {
+article.accordion-header:hover {
   background-color: #e67e22;
 }
 /* Active Accordion */
@@ -22,14 +22,14 @@ body {
 }
 
 /* Accordion Content */
-.accordion-content {
+article.accordion-content {
   max-width: 0;
   overflow: hidden;
   white-space: nowrap;
   transition: max-width 0.5s ease;
   padding: 0 15px;
 }
-.accordion-item.active .accordion-content {
+article.accordion-item.active .accordion-content {
   max-width: 400px; /* Adjust based on content width */
 }
 
