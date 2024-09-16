@@ -1,76 +1,54 @@
 <!DOCTYPE html>
-<html>
+<meta name="viewport" content="width=device-width, initial-scale=0.75">
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<style>
-body {
-  margin: 0;
-  font-family: "Lato", sans-serif;
-}
-
-.sidebar {
-  margin: 0;
-  padding: 0;
-  width: 200px;
-  background-color: #f1f1f1;
-  position: fixed;
-  height: 100%;
-  overflow: auto;
-}
-
-.sidebar a {
-  display: block;
-  color: black;
-  padding: 16px;
-  text-decoration: none;
-}
- 
-.sidebar a.active {
-  background-color: #565857;
-  color: white;
-}
-
-.sidebar a:hover:not(.active) {
-  background-color: #555;
-  color: rgb(0, 0, 0);
-}
-
-div.content {
-  margin-left: 200px;
-  padding: 1px 16px;
-  height: 1000px;
-}
-
-@media screen and (max-width: 700px) {
-  .sidebar {
-    width: 100%;
-    height: auto;
-    position: relative;
-  }
-  .sidebar a {float: left;}
-  div.content {margin-left: 0;}
-}
-
-@media screen and (max-width: 400px) {
-  .sidebar a {
-    text-align: center;
-    float: none;
-  }
-}
-</style>
+<link rel="stylesheet" href="hcadbashcss.css">
+<title> HCAD 25th Anniversary Bash </title>
 </head>
+ 
 <body>
+<article class="accordion">
+  <section id="acc0">
+    <h2 style="text-align:left;"><a href="#acc0">Welcome</a></h2>
+      <p><img src="https://i.imgur.com/2dPMW9C.png" width="900" height="800"></p>
+    </section>
 
-<div class="sidebar">
-  <a class="active" href="index.html">Home</a>
-  <a href= "members.html">Members</a>
-  <a href="menu.html">Menu</a>
-  <a href="letters.html">Letters</a>
-</div>
+ 
+  <section id="acc1">
+  <h2><a href="#acc1">HCAD Bash Co-Chairs</a></h2>
+  <p><img src="https://i.imgur.com/0B9I4Gb.jpeg" width="800" height="1000"></p>
+  </section>
 
-<div class="content">
-  <img src="https://i.imgur.com/2dPMW9C.png" width="800" height="500" positon ="center">
-</div>
+<section id="acc2">
+<h2><a href="#acc2">Letters</a></h2>
+<iframe src="hcadletters.html" height="1000" width="800"style="border:none;"></iframe>
 
+</section>
+<section id="acc3">
+<h2><a href="#acc3">HCAD Members</a></h2>
+<p><img src="https://i.imgur.com/ya9rY0A.png" width="800" height="1000"></p>
+<p><img src="https://i.imgur.com/rPrDdxA.png" width="800" height="1000"></p>
+</section>
+<section id="acc4">
+<h2><a href="#acc4">Cocktail Menu</a></h2>
+<p><img src="https://i.imgur.com/XPPO8iG.jpeg" width="800" height="1000"></p>
+
+</section>
+<section id="acc5">
+<h2><a href="#acc5">Food Menu</a></h2>
+<p><img src="https://i.imgur.com/Pp7VFbW.png" width="800" height="1000"></p>
+</section>
+<section id="acc6">
+<h2><a href="#acc6">Pictures</a></h2>
+<iframe src="hcadpictures.html" height="1000" width="800"style="border:none;"></iframe>
+</section>
+<section id="acc7">
+<h2><a href="#acc7">Silent Auction</a></h2>
+<p><h2>hi</h2></p>
+</section>
+<section id="acc8">
+<h2><a href="#acc8">Sponsors</a></h2>
+<p><iframe src="hcadsponsors.html" height="1000" width="600"style="border:none;"></iframe></p>
+</section>
+</article>
 </body>
 </html>
