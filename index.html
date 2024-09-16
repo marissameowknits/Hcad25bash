@@ -1,73 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HCAD 25th Anniversary Bash</title>
-  <link rel="stylesheet" href="hcadbashcss.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HCAD Bash with Sideways Accordion</title>
 </head>
-<body>
+<body style="font-family: Arial, sans-serif; background-color: #f4f4f4;">
 
-<article class="accordion">
+    <h1 style="text-align: center; color: #333;">HCAD 25th Anniversary Bash</h1>
 
-  <section id="acc0">
-    <h2><a href="#acc0">Welcome</a></h2>
-    <img src="https://i.imgur.com/2dPMW9C.png" alt="Welcome Image" style="width:100%; height:auto;">
-  </section>
+    <div style="margin: 20px auto; width: 100%; display: flex;">
 
-  <section id="acc1">
-    <h2><a href="#acc1">HCAD Bash Co-Chairs</a></h2>
-    <img src="https://i.imgur.com/0B9I4Gb.jpeg" alt="Co-Chairs Image" style="width:100%; height:auto;">
-  </section>
+        <!-- Accordion Tabs -->
+        <div style="width: 20%;">
+            <button onclick="toggleAccordion('aboutContent')" 
+                    style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+                About
+            </button>
+            <button onclick="toggleAccordion('lettersContent')" 
+                    style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+                Letters
+            </button>
+            <button onclick="toggleAccordion('membersContent')" 
+            style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+        Members
+    </button>
 
-  <section id="acc2">
-    <h2><a href="#acc2">Letters</a></h2>
-    <iframe src="hcadletters.html" style="width:100%; height:800px; border:none;"></iframe>
-  </section>
+            <button onclick="toggleAccordion('menuContent')" 
+                    style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+                Menu
+            </button>
+            <button onclick="toggleAccordion('photosContent')" 
+                    style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+                Photos
+            </button>
+            <button onclick="toggleAccordion('sponsorsContent')" 
+                    style="background-color: #333; color: white; padding: 10px; width: 100%; text-align: left; border: none; cursor: pointer; display: block;">
+                Sponsors
+            </button>
+        </div>
 
-  <section id="acc3">
-    <h2><a href="#acc3">HCAD Members</a></h2>
-    <iframe src="hcadmembers.html" style="width:100%; height:800px; border:none;"></iframe>
-  </section>
+        <!-- Accordion Content -->
+        <div id="contentContainer" style="width: 80%; padding: 20px; background-color: white; border: 1px solid #ddd;">
+            
+            <div id="aboutContent" style="display: none;">
+                
+                <img src="https://i.imgur.com/2dPMW9C.png" alt="Welcome Image" style="width:100%; height:auto;">
+                <p>The HCAD 25th Anniversary Bash celebrates 25 years of excellence. Join us for a night of fun, memories, and entertainment as we honor this milestone.</p>
+            </div>
 
-  <section id="acc4">
-    <h2><a href="#acc4">Cocktail Menu</a></h2>
-    <img src="https://i.imgur.com/XPPO8iG.jpeg" alt="Cocktail Menu Image" style="width:100%; height:auto;">
-  </section>
+            <div id="lettersContent" style="display: none;">
+                <h2>Letters</h2>
+                <img src="https://i.imgur.com/0B9I4Gb.jpeg" alt="Co-Chairs Image" style="width:100%; height:auto;">
+                <img src="https://i.imgur.com/nV20KTJ.png"style="width:100%; height:auto;">
+                <img src="https://i.imgur.com/JxsXLCI.png"style="width:100%; height:auto;">
 
-  <section id="acc5">
-    <h2><a href="#acc5">Food Menu</a></h2>
-    <img src="https://i.imgur.com/Pp7VFbW.png" alt="Food Menu Image" style="width:100%; height:auto;">
-  </section>
+            </div>
 
-  <section id="acc6">
-    <h2><a href="#acc6">Pictures</a></h2>
-    <iframe src="hcadpictures.html" style="width:100%; height:800px; border:none;"></iframe>
-  </section>
+            <div id="menuContent" style="display: none;">
+                <h2>Cocktail & Food Menu</h2>
+                <img src="https://i.imgur.com/XPPO8iG.jpeg" alt="Cocktail Menu Image" style="width:100%; height:auto;">
+                <img src="https://i.imgur.com/Pp7VFbW.png" alt="Food Menu Image" style="width:100%; height:auto;">
+            </div>
 
-  <section id="acc7">
-    <h2><a href="#acc7">Silent Auction</a></h2>
-    <p>HCAD will host a silent auction to raise money for Maryland School for the Deaf-Columbia students attending summer camps. 100% of proceeds will support these children’s programs.</p>
-  </section>
+            <div id="membersContent" style="display: none;">
+                <p><img src="https://i.imgur.com/x3CedFW.jpeg" style="width:100%; height:auto;"> </p>
+                <p><img src="https://i.imgur.com/ya9rY0A.png" style="width:100%; height:auto;"></p>
+               <p><img src="https://i.imgur.com/rPrDdxA.png" style="width:100%; height:auto;"></p>
+               
+            </div>
 
-  <section id="acc8">
-    <h2><a href="#acc8">Sponsors</a></h2>
-    <iframe src="hcadsponsors.html" style="width:100%; height:800px; border:none;"></iframe>
-  </section>
+            <div id="photosContent" style="display: none;">
+                <h2>Photos</h2>
+                <p>Check out the photos from the event, capturing memorable moments.</p>
 
-</article>
+                <img src="https://i.imgur.com/example1.jpg" alt="Event Photo 1" style="width: 100%; height: auto;">
+                <img src="https://i.imgur.com/example2.jpg" alt="Event Photo 2" style="width: 100%; height: auto;">
+            </div>
+
+            <div id="sponsorsContent" style="display: none;">
+                <h2>Sponsors</h2>
+                <p>We thank our amazing sponsors for their continued support, helping make this anniversary bash a success.</p>
+             
+                <img src="https://i.imgur.com/5Tuc2JA.png" style="width: 100px; height: auto;">
+                <img src="https://i.imgur.com/VJONhv3.png" style="width: 100px; height: auto;">
+                <img src="https://i.imgur.com/UhNYbwC.png" style="width: 100px; height: auto;">
+                <img src="https://i.imgur.com/dC0fDGP.png" style="width: 100px; height: auto;">
+                <img src="https://i.imgur.com/0BSOvza.png" style="width: 100px; height: auto;">
+
+
+
+            </div>
+
+        </div>
+    </div>
+
+    <script>
+        function toggleAccordion(id) {
+            var contentDivs = document.querySelectorAll('#contentContainer > div');
+            contentDivs.forEach(function(div) {
+                div.style.display = 'none';
+            });
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
 
 </body>
-<script>
-  // Select all accordion headers
-const headers = document.querySelectorAll('.accordion-header');
-
-// Add click event to toggle each accordion section
-headers.forEach(header => {
-  header.addEventListener('click', function() {
-    const item = this.parentElement;
-    item.classList.toggle('active');
-  });
-});</script>  
 </html>
-
