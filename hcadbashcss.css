@@ -20,7 +20,7 @@ overflow:hidden;
 article.accordion section h2
 {
 position: absolute;
-font-size:medium;
+font-size:small;
 font-weight: bold;
 width: 12em;
 top: 12em;
