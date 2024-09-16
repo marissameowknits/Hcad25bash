@@ -1,14 +1,14 @@
 body {
-  background-color:gray ;
+  background-color: #dcdcdc; /* Lighter background for readability */
 }
 
 /* Accordion Header Styling */
 .accordion-header {
   background-color: #f39c12;
   color: white;
-  padding: 15px;
-  cursor: pointer;
-  font-size: 18px;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 5px; /* Rounded corners */
   border: 1px solid #e67e22;
   transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
@@ -21,97 +21,29 @@ body {
 /* Active Accordion */
 .accordion-item.active .accordion-header {
   background-color: #d35400;
-  color: white;
 }
 
 /* Accordion Content */
 .accordion-content {
   padding: 15px;
-  border-top: none;
+  border: 1px solid #d35400;
   background-color: #f8f9fa;
-  transition: max-height 0.3s ease;
+  border-radius: 5px; /* For rounded corners */
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease;
 }
 
-
-
-
-article.accordion
-{
-
-height:auto;
-background-color: gray;
-overflow:hidden;
-}
-article.accordion section
-{
-position:sticky;
-float:left;
-width: 2em;
-  height: 10em;
-overflow:hidden;
+.accordion-item.active .accordion-content {
+  max-height: 500px; /* Adjust for content height */
 }
 
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: none ;
+/* Improved sticky sidebar */
+article.accordion section {
+  width: 3em;
+  height: auto;
 }
 
-
-article.accordion section h2
-{
-position: absolute;
-font-size:small;
-font-weight: bold;
-width: 12em;
-top: 12em;
-left: 0;
-text-indent: 1em;
--webkit-transform-origin: 0 0;
--moz-transform-origin: 0 0;
--ms-transform-origin: 0 0;
--o-transform-origin: 0 0;
-transform-origin: 0 0;
--webkit-transform: rotate(-90deg);
--moz-transform: rotate(-90deg);
--ms-transform: rotate(-90deg);
--o-transform: rotate(-90deg);
-transform: rotate(-90deg);
-}
-article.accordion section h2 a
-{
-
-width: 100%;
-line-height: 2em;
-text-decoration: none;
-color: rgb(0, 0, 0);
-outline: 0 none;
-}
-article.accordion section:target
-{
-width: auto;
-height: auto;
-color: darkslategray;
-
-}
-article.accordion section:target h2
-{
-position: static;
-font-size: 1.0em;
-text-indent: 0;
-color: #333;
--webkit-transform: rotate(0deg);
--moz-transform: rotate(0deg);
--ms-transform: rotate(0deg);
--o-transform: rotate(0deg);
-transform: rotate(0deg);
-}
-article.accordion section,
-article.accordion section h2
-{
--webkit-transition: all 1s ease;
--moz-transition: all 1s ease;
--ms-transition: all 1s ease;
--o-transition: all 1s ease;
-transition: all 1s ease;
+article.accordion section h2 {
+  font-size: 1.5em;
 }
