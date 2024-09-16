@@ -21,7 +21,7 @@ overflow:hidden;
 .clearfix::after {
   content: "";
   clear: both;
-  display: block ;
+  display: none ;
 }
 
 
