@@ -26,13 +26,13 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding-right: 20px; /* Add space between buttons and content */
+            padding-right: 20px; /* Space between buttons and content */
         }
         .buttons button {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            width: 40mm;
+            width: 100%; /* Ensure button takes full width */
             height: 20mm;
             padding: 10px;
             border: none;
@@ -43,7 +43,7 @@
         }
         .content {
             width: 80%;
-            padding-left: 20px; /* Add padding so content doesn't touch edges */
+            padding-left: 20px;
             box-sizing: border-box;
             background-color: #333;
             color: #fff;
@@ -52,7 +52,21 @@
             display: none; /* All content hidden by default */
         }
         .content div.active {
-            display: block; /* Display active content */
+            display: block; /* Show active content */
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 768px) {
+            .container {
+                flex-direction: column; /* Stack buttons and content vertically */
+            }
+            .buttons, .content {
+                width: 100%; /* Full width for both buttons and content */
+                padding: 0; /* Remove padding in mobile view */
+            }
+            .content {
+                padding-top: 20px; /* Add top padding to content for spacing */
+            }
         }
     </style>
 </head>
