@@ -4,174 +4,124 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Howard County Association of the Deaf 25th Anniversary</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif; 
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        .container {
+            display: flex;
+            margin: 20px auto;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        .buttons {
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            padding-right: 20px; /* Add space between buttons and content */
+        }
+        .buttons button {
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: center;
+            width: 40mm;
+            height: 20mm;
+            padding: 10px;
+            border: none;
+            background-color: transparent;
+            font-size: 16px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .content {
+            width: 80%;
+            padding-left: 20px; /* Add padding so content doesn't touch edges */
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+        }
+        .content div {
+            display: none; /* All content hidden by default */
+        }
+        .content div.active {
+            display: block; /* Display active content */
+        }
+    </style>
 </head>
-<body style="font-family: Arial, sans-serif; background-color: #333">
+<body>
 
-    <img src=" https://i.imgur.com/uhgZr4W.png "style="width:100%; height:auto;">    
+    <img src="https://i.imgur.com/uhgZr4W.png" alt="Event Banner">
 
-    <div style="margin: 20px auto; width: 100%; display: flex;">
-
+    <div class="container">
         <!-- Accordion Tabs -->
-        <div style="width: 20%;">
-         <button onclick="toggleAccordion('homeContent')" 
-        style="background-image:url('https://i.imgur.com/S5kRAXE.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
-  
-            <button onclick="toggleAccordion('lettersContent')" 
-        style="background-image:url('https://i.imgur.com/cw3CKw6.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
-            <button onclick="toggleAccordion('membersContent')" 
-        style="background-image:url('https://i.imgur.com/nhrpCM4.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
-
-               <button onclick="toggleAccordion('menuContent')" 
-        style="background-image:url('https://i.imgur.com/zKg62hT.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
-
-              <button onclick="toggleAccordion('photosContent')" 
-        style="background-image:url('https://i.imgur.com/DL4lKea.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
-
-             <button onclick="toggleAccordion('sponsorsContent')" 
-        style="background-image:url('https://i.imgur.com/5xvZiW3.png'); 
-               background-size: contain; 
-               background-repeat: no-repeat; 
-               background-position: center; 
-               width: 40mm; 
-               height: 20mm; 
-               padding: 10px; 
-               border: none; 
-               background-color: transparent; 
-               color: black; 
-               font-size: 16px; 
-               text-align: center;">
-
-</button>
+        <div class="buttons">
+            <button onclick="toggleAccordion('homeContent')" style="background-image:url('https://i.imgur.com/S5kRAXE.png');">Home</button>
+            <button onclick="toggleAccordion('lettersContent')" style="background-image:url('https://i.imgur.com/cw3CKw6.png');">Letters</button>
+            <button onclick="toggleAccordion('membersContent')" style="background-image:url('https://i.imgur.com/nhrpCM4.png');">Members</button>
+            <button onclick="toggleAccordion('menuContent')" style="background-image:url('https://i.imgur.com/zKg62hT.png');">Menu</button>
+            <button onclick="toggleAccordion('photosContent')" style="background-image:url('https://i.imgur.com/DL4lKea.png');">Photos</button>
+            <button onclick="toggleAccordion('sponsorsContent')" style="background-image:url('https://i.imgur.com/5xvZiW3.png');">Sponsors</button>
         </div>
 
         <!-- Accordion Content -->
-        <div id="contentContainer" style="width: 80%; background-color: #333">
-            
-            <div id="homeContent">
-                <img src="https://i.imgur.com/p1mWoQP.jpeg"alt="Welcome Image" style="width:100%; height:auto;">
-               
+        <div class="content" id="contentContainer">
+            <div id="homeContent" class="active">
+                <img src="https://i.imgur.com/p1mWoQP.jpeg" alt="Welcome Image">
             </div>
 
-            <div id="lettersContent" style="display: none;">
-                
-                <img src="https://i.imgur.com/Axphyzm.jpeg" alt="Co-Chairs Image" style="width:100%; height:auto;">
-                <img src="https://i.imgur.com/bM1Dur2.jpeg" style="width:100%;height;auto;">
-                <img src="https://i.imgur.com/cQGVjwW.jpeg "style="width:100%; height:auto;">                            
-                <img src="https://i.imgur.com/nV20KTJ.png"style="width:100%; height:auto;">
-                <img src="https://i.imgur.com/JxsXLCI.png"style="width:100%; height:auto;">
-
+            <div id="lettersContent">
+                <img src="https://i.imgur.com/Axphyzm.jpeg" alt="Co-Chairs Image">
+                <img src="https://i.imgur.com/bM1Dur2.jpeg">
+                <img src="https://i.imgur.com/cQGVjwW.jpeg">
+                <img src="https://i.imgur.com/nV20KTJ.png">
+                <img src="https://i.imgur.com/JxsXLCI.png">
             </div>
 
-            <div id="menuContent" style="display: none;">
-                <img src="https://i.imgur.com/XPPO8iG.jpeg" alt="Cocktail Menu Image" style="width:100%; height:auto;">
-                <img src="https://i.imgur.com/Pp7VFbW.png" alt="Food Menu Image" style="width:100%; height:auto;">
+            <div id="menuContent">
+                <img src="https://i.imgur.com/XPPO8iG.jpeg" alt="Cocktail Menu Image">
+                <img src="https://i.imgur.com/Pp7VFbW.png" alt="Food Menu Image">
             </div>
 
-            <div id="membersContent" style="display: none;">
-                <p><img src="https://i.imgur.com/pZn6m3i.jpeg" style="width:100%; height:auto;"> </p>
-                <p><img src="https://i.imgur.com/ya9rY0A.png" style="width:100%; height:auto;"></p>
-               <p><img src="https://i.imgur.com/rPrDdxA.png" style="width:100%; height:auto;"></p>
-               <p><img src="https://i.imgur.com/rOYLfSh.jpeg" style="width:100%; height:auto,"></p>
+            <div id="membersContent">
+                <img src="https://i.imgur.com/pZn6m3i.jpeg" alt="Members Image">
+                <img src="https://i.imgur.com/ya9rY0A.png">
+                <img src="https://i.imgur.com/rPrDdxA.png">
+                <img src="https://i.imgur.com/rOYLfSh.jpeg">
             </div>
 
-            <div id="photosContent" style="display: none;">
-    
-<img src="https://i.imgur.com/qDl51X3.jpeg"style="width: 100%; height: auto;">
-<img src="https://i.imgur.com/QsCzJOL.jpeg" style="width: 100%; height: auto;">
-<img src="https://i.imgur.com/gEZozuV.jpeg" style="width: 100%; height: auto;">
-<img src="https://i.imgur.com/mKMfxQe.jpeg" style="width: 100%; height: auto;">              
-                
+            <div id="photosContent">
+                <img src="https://i.imgur.com/qDl51X3.jpeg">
+                <img src="https://i.imgur.com/QsCzJOL.jpeg">
+                <img src="https://i.imgur.com/gEZozuV.jpeg">
+                <img src="https://i.imgur.com/mKMfxQe.jpeg">
             </div>
 
-            <div id="sponsorsContent" style="display: none;">
-                
-                <img src="https://i.imgur.com/R86HmkW.png" style="width:160%;height:auto,">
-             
+            <div id="sponsorsContent">
+                <img src="https://i.imgur.com/R86HmkW.png" style="width: 100%; height: auto;">
                 <img src="https://i.imgur.com/5Tuc2JA.png" style="width: 700px; height: auto;">
                 <img src="https://i.imgur.com/VJONhv3.png" style="width: 600px; height: auto;">
                 <img src="https://i.imgur.com/UhNYbwC.png" style="width: 500px; height: auto;">
                 <img src="https://i.imgur.com/dC0fDGP.png" style="width: 400px; height: auto;">
                 <img src="https://i.imgur.com/0BSOvza.png" style="width: 300px; height: auto;">
-
-
-
             </div>
-
         </div>
     </div>
 
     <script>
         function toggleAccordion(id) {
-            var contentDivs = document.querySelectorAll('#contentContainer > div');
+            var contentDivs = document.querySelectorAll('.content > div');
             contentDivs.forEach(function(div) {
-                div.style.display = 'none';
+                div.classList.remove('active');
             });
-            document.getElementById(id).style.display = 'block';
+            document.getElementById(id).classList.add('active');
         }
     </script>
 
