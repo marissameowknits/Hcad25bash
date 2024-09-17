@@ -22,17 +22,19 @@
             box-sizing: border-box;
         }
         .buttons {
-            width: 20%;
+            width: 20%; /* Adjust width for larger screens */
             display: flex;
             flex-direction: column;
             gap: 10px;
-            padding-right: 20px; /* Space between buttons and content */
+            padding-right: 20px;
+            overflow-y: auto; /* Allow vertical scrolling if buttons exceed screen height */
+            max-height: 100vh; /* Prevents the buttons from overflowing vertically */
         }
         .buttons button {
             background-size: contain;
             background-repeat: no-repeat;
             background-position: center;
-            width: 100%; /* Ensure button takes full width */
+            width: 100%;
             height: 20mm;
             padding: 10px;
             border: none;
@@ -58,14 +60,23 @@
         /* Media Query for Mobile Devices */
         @media (max-width: 768px) {
             .container {
-                flex-direction: column; /* Stack buttons and content vertically */
+                flex-direction: row; /* Keep flexbox row */
             }
-            .buttons, .content {
-                width: 100%; /* Full width for both buttons and content */
-                padding: 0; /* Remove padding in mobile view */
+            .buttons {
+                width: 30%; /* Increase button width on mobile */
             }
             .content {
-                padding-top: 20px; /* Add top padding to content for spacing */
+                width: 70%; /* Adjust content width on mobile */
+                padding-left: 10px; /* Reduce left padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .buttons {
+                width: 35%; /* More space for buttons on very small screens */
+            }
+            .content {
+                width: 65%;
             }
         }
     </style>
