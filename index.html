@@ -27,7 +27,9 @@
             flex-direction: column;
             gap: 5px;
             padding-right: 10px;
+            max-height: 100vh;
             overflow-y: auto; /* Allow vertical scrolling if buttons exceed screen height */
+            overflow-x: hidden;            
             max-height: 100vh; /* Prevents the buttons from overflowing vertically */
         }
         .buttons button {
@@ -49,6 +51,8 @@
             box-sizing: border-box;
             background-color: #333;
             color: #fff;
+            max-height: 100vh; /* Make container height fill viewport */
+            overflow-y: auto; /* Enable vertical scrolling */
         }
         .content div {
             display: none; /* All content hidden by default */
@@ -57,6 +61,13 @@
             display: block; /* Show active content */
         }
 
+     .content img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin-bottom: 10px;
+        }
+       
         /* Media Query for Mobile Devices */
         @media (max-width: 768px) {
             .container {
