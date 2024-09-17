@@ -22,6 +22,13 @@
             width: 100%;
             box-sizing: border-box;
         }
+
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+        
         .buttons {
             width: 20%; /* Adjust width for larger screens */
             display: flex;
